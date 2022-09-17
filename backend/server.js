@@ -11,6 +11,6 @@ require('dotenv').config()
 connectDb()
 app.use('/home',route)
 app.use('/home',gemStoneRoute)
-app.listen(process.env.PORT_NUM,()=>{
+app.listen(process.env.PORT_NUM || 5000,()=>{
     console.log('server is running')
 })
