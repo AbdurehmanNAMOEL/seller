@@ -15,7 +15,7 @@ const StoneCard = ({image,title,name,weight,desc,id}) => {
  
   return (
     <div className=' w-[80%] h-[450px] mb-4 mt-4 md:w-[60%] md:h-[180px] flex flex-col md:flex-row shadow-md rounded-md border-2 border-[#a8a8a856]'>
-     <div className='w-full h-[50%] md:w-[30%] md:h-full'>
+     <div className='w-full h-[40%] md:w-[30%] md:h-full'>
         <img src={image} alt=""  className='w-full h-full'/>
      </div>
      <div className='w-full md:w-[25%] h-full flex flex-col text-white'>
@@ -23,15 +23,15 @@ const StoneCard = ({image,title,name,weight,desc,id}) => {
       <span className='text-[16px] font-mono w-full flex justify-center items-center md:justify-start md:ml-4 md:mt-3'>{`weight: ${weight}`}</span>
       <span className='text-[12px] mt-2 font-mono w-full flex justify-center items-center md:justify-start md:ml-4 md:mt-3'>{`by ${name}`}</span>
      </div>
-     <div className='w-[35%] h-full flex flex-col  text-[#121212af]'>
-       <h1 className='mt-4 text-white'>Description</h1>
+     <div className='w-[35%] h-[200px] md:h-full flex flex-col  text-[#121212af]'>
+       <h1 className='mt-4 text-white ml-2 md:ml-0'>Description</h1>
        <p className='text-sm text-white mt-2 ml-2'>{desc}</p>
      </div>
-     <div className=' md:w-[20%] h-full flex justify-center items-center md:flex-col gap-4'>
-      <div className='w-[40%] h-[60%] md:h-[20%]  md:w-[50%] flex justify-center items-center border-2 border-blue-400 rounded-md cursor-pointer text-white hover:bg-blue-500'>
+     <div className='mt-5 md:mt-0 md:w-[20%] h-full flex justify-center items-center md:flex-col gap-4'>
+      <div className='w-[80px] h-[40px] -mt-8 md:h-[20%] md:mt-0  md:w-[50%] flex justify-center items-center border-2 border-blue-400 rounded-md cursor-pointer text-white hover:bg-blue-500'>
         <Link to={`/edit/${id}`}>Edit</Link>
       </div>
-      <img onClick={deletedStone} src={Trash} alt="" className='w-[40%] h-[60%] md:h-[30%] md:w-[60%] flex justify-center items-center rounded-md cursor-pointer text-white '/>
+      <img onClick={deletedStone} src={Trash} alt="" className='w-[120px] h-[50px] -mt-12 md:mt-0  md:h-[30%] md:w-[60%] flex justify-center items-center rounded-md cursor-pointer text-white '/>
      </div>
     </div>
   )

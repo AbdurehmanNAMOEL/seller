@@ -87,6 +87,8 @@ useEffect(()=>{
         <option value="Sapphire">Sapphire</option>
         <option value="Ruby">Ruby</option>
         <option value="peridot">peridot</option>
+        <option value="opal">Opal</option>
+        <option value="gold">Gold</option>
         </select> 
 
         <input 

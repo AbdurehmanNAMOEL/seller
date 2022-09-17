@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react';
 import { getStone } from '../redux/features/gemstoneSlice';
 import LoadSvg  from '../images/load.svg'
-import { getSeller, getUser } from '../redux/features/authSlice';
+import { getSeller} from '../redux/features/authSlice';
 
 
 const Home = () => {

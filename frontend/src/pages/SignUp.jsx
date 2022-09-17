@@ -43,15 +43,15 @@ const SignUp = () => {
   return (
     <div className='w-[90%] h-[95vh] mt-4 shadow-md rounded-md border-2 border-[#968f8f44]'>
       <div className='w-full h-full flex flex-col md:flex-row'>
-      <img src={Stone} alt ='' className='md:w-[50%] h-auto bg-[#15f1a8] flex flex-col'/>
+      <img src={Stone} alt ='' className='h-[250px] md:w-[50%] md:h-auto bg-[#15f1a8] flex flex-col'/>
       <div className='md:w-[50%]  h-auto flex justify-center bg-[#292828]'>
        <form onSubmit={onSubmit} className='w-[400px] mt-4 h-[95%] items-center flex flex-col '>
        <div className='h-[60px] w-full flex justify-center items-center'>
-       <div className='text-xl text-[#121212c9] -mt-8'>
-        <div className='w-[80px] h-[80px] absolute'>
+       <div className='text-xl text-[#121212c9] -mt-2'>
+        <div className='w-[80px] h-[80px]'>
             <img src={User} alt=""  className='w-[60px] h-[60px]'/>  
         </div>
-      <div className='w-[80%] h-[50px]  absolute mt-16 opacity-80 flex flex-col  z-20  cursor-pointer'>
+      <div className='w-[80%] h-[50px]   mt-16 opacity-80 flex flex-col  z-20  cursor-pointer'>
         <img src={Camera} alt="" className='w-[30px] h-[20px] ml-[15px] -mt-5 cursor-pointer bg-blue-200'/>
         <div className='absolute w-[30px] -mt-4 opacity-0 cursor-pointer'>
         <FileBase64
@@ -126,7 +126,7 @@ const SignUp = () => {
           already have an account? SignIn
         </Link>
       </span>
-      <button type='submit'  className='w-[80%] h-[40px] mt-1 flex justify-center items-center bg-blue-500 text-white rounded-md'>Submit</button>
+      <button type='submit'  className='w-[80%] h-[40px] mt-1 flex justify-center items-center bg-blue-500 text-white rounded-md hover:bg-blue-500'>Submit</button>
     </form>
    </div>
   </div>

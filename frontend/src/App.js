@@ -1,5 +1,5 @@
 import SignUp from "./pages/SignUp";
-import { BrowserRouter ,Routes,Route } from 'react-router-dom';
+import { BrowserRouter ,Routes,Route, useNavigate } from 'react-router-dom';
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
@@ -8,8 +8,22 @@ import DashBoard from "./pages/DashBoard";
 import Upload from "./pages/Upload";
  import { ToastContainer } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
+import { useEffect, useState } from "react";
+
 function App() {
-  
+ 
+    const [isLoggedIn,setLogIn] =useState(false)
+
+
+    useEffect(()=>{
+      if(localStorage.getItem('profile')){
+        setLogIn(true)
+   
+        console.log('true')
+      }
+      console.log('false')
+   
+    },[])
   return (
     <div className="w-full h-auto flex justify-center items-center ">
       <BrowserRouter>

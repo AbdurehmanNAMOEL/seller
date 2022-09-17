@@ -4,9 +4,13 @@ import { pattern } from '../verifier/patternVerifier';
 const InputField = ({title,type,placeholder,error,setValue,value,name}) => {
 
 const [isValid,setValid] = useState(false)
+const [isEmpity,setEmpty] = useState()
 
 const validate = (field,regex)=>{
-      if(!regex.test(field.value)){
+      let inputValue = field.value
+      if(!regex.test(inputValue)){
+      if(inputValue !== ''){setEmpty(error)
+      }else if(inputValue===''){setEmpty('input is required')}
       setValid(true)
    }else setValid(false)
   }
@@ -26,7 +30,7 @@ const handleInput =(e)=>{
         value={value}  
         name={name}
         className='h-[35px] indent-2 outline-none border-[1px] border-[#12121259] rounded-[3px]'/>
-        {isValid ? <label className='text-red-600 mt-1 text-sm font-Poppinsk'>{error}</label>:''}
+        {isValid ? <label className='text-red-600 mt-1 text-sm font-Poppinsk'>{isEmpity}</label>:''}
     </div>
   )
 }
